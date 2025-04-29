@@ -5,82 +5,125 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Olin Pinto - Portfolio</title>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2Cz3H95clU+1Usx2kphPHV1JZI5QUm39nQUsZmXWyzCHkbUO1Gy1LVFwJGl+kxPbmd7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 	<style>
+		:root {
+			--primary: #00d1b2;
+			--bg-dark: #0f2027;
+			--bg-darker: #111;
+			--text-light: #f0f0f0;
+			--text-muted: #aaa;
+			--glass: rgba(255, 255, 255, 0.1);
+			--border-glass: rgba(255, 255, 255, 0.18);
+		}
+
 		body {
 			margin: 0;
 			font-family: 'Inter', sans-serif;
-			background: #0f2027;
-			color: #f0f0f0;
+			background: var(--bg-dark);
+			color: var(--text-light);
 			scroll-behavior: smooth;
+			transition: background 0.3s ease;
 		}
+
 		a {
-			color: #00d1b2;
+			color: var(--primary);
 			text-decoration: none;
+			transition: color 0.3s ease;
 		}
+
 		header.hero-section {
 			background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 			text-align: center;
-			padding: 5em 1em;
+			padding: 6em 1em;
+			position: relative;
 		}
+
 		header .inner img {
 			border-radius: 50%;
 			width: 150px;
 			margin-bottom: 1em;
+			box-shadow: 0 0 20px rgba(0,0,0,0.6);
 		}
-		section {
-			padding: 4em 2em;
-			max-width: 960px;
-			margin: 0 auto;
-		}
-		h1, h2, h3 {
-			color: #ffffff;
-		}
+
 		.button {
 			display: inline-block;
 			padding: 0.75em 1.5em;
-			background: #00d1b2;
+			background: var(--primary);
 			color: #fff;
 			border-radius: 0.5em;
-			margin-top: 1em;
+			margin-top: 1.5em;
 			transition: background 0.3s ease;
 		}
 		.button:hover {
 			background: #00a896;
 		}
+
+		section {
+			padding: 5em 2em;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		h1, h2, h3 {
+			color: #ffffff;
+		}
+
 		.grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			gap: 2em;
 		}
+
 		.card {
-			background: rgba(255, 255, 255, 0.05);
+			background: var(--glass);
+			backdrop-filter: blur(10px);
+			border: 1px solid var(--border-glass);
 			border-radius: 1em;
 			padding: 2em;
-			transition: transform 0.3s ease;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
 		}
 		.card:hover {
-			transform: translateY(-5px);
+			transform: translateY(-8px);
+			box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 		}
+
 		.card img {
 			width: 100%;
 			border-radius: 0.5em;
 			margin-bottom: 1em;
 		}
+
 		footer {
 			text-align: center;
-			padding: 2em;
-			background: #111;
-			color: #888;
+			padding: 3em 1em;
+			background: var(--bg-darker);
+			color: var(--text-muted);
 		}
+
 		footer a {
-			color: #00d1b2;
+			color: var(--primary);
 			margin: 0 0.5em;
+			font-size: 1.2em;
+		}
+
+		.toggle-theme {
+			position: fixed;
+			top: 1em;
+			right: 1em;
+			background: var(--primary);
+			color: #fff;
+			padding: 0.5em 1em;
+			border-radius: 0.5em;
+			cursor: pointer;
+			z-index: 999;
 		}
 	</style>
 </head>
 <body>
+	<div class="toggle-theme" onclick="toggleTheme()">Toggle Theme</div>
+
 	<header class="hero-section">
 		<div class="inner" data-aos="fade-down">
 			<img src="images/avatar.jpg" alt="Olin Pinto Avatar">
@@ -88,6 +131,8 @@
 			<h3>Radiation Protection Researcher @ CERN</h3>
 			<p>Monte Carlo simulations | Detector R&D | Muon Tomography | Data Science</p>
 			<a href="#about" class="button">Explore My Work</a>
+			<br>
+			<a href="CV_OlinPinto.pdf" class="button" style="margin-top: 1em; background: transparent; border: 2px solid var(--primary);">Download CV</a>
 		</div>
 	</header>
 
@@ -124,7 +169,7 @@
 		<h2>Contact Me</h2>
 		<p>Let's collaborate or discuss interesting projects.</p>
 		<ul>
-			<li>Email: <a href="mailto:o.pinto@cern.ch">olin.pinto@kbfi.de</a></li>
+			<li>Email: <a href="mailto:o.pinto@cern.ch">o.pinto@cern.ch</a></li>
 			<li><a href="https://www.linkedin.com/in/olin-pinto">LinkedIn</a> | <a href="https://github.com/olinpinto">GitHub</a></li>
 		</ul>
 	</section>
@@ -140,5 +185,12 @@
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>AOS.init();</script>
+	<script>
+		function toggleTheme() {
+			document.body.classList.toggle('light');
+			document.body.style.background = document.body.classList.contains('light') ? '#fff' : 'var(--bg-dark)';
+			document.body.style.color = document.body.classList.contains('light') ? '#111' : 'var(--text-light)';
+		}
+	</script>
 </body>
 </html>
