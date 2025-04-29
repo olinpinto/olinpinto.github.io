@@ -1,210 +1,143 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Olin Pinto - Home Page</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Olin Pinto - Portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2Cz3H95clU+1Usx2kphPHV1JZI5QUm39nQUsZmXWyzCHkbUO1Gy1LVFwJGl+kxPbmd7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Inter', sans-serif;
+			background: #0f2027;
+			color: #f0f0f0;
+			scroll-behavior: smooth;
+		}
+		a {
+			color: #00d1b2;
+			text-decoration: none;
+		}
+		header.hero-section {
+			background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+			text-align: center;
+			padding: 5em 1em;
+		}
+		header .inner img {
+			border-radius: 50%;
+			width: 150px;
+			margin-bottom: 1em;
+		}
+		section {
+			padding: 4em 2em;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		h1, h2, h3 {
+			color: #ffffff;
+		}
+		.button {
+			display: inline-block;
+			padding: 0.75em 1.5em;
+			background: #00d1b2;
+			color: #fff;
+			border-radius: 0.5em;
+			margin-top: 1em;
+			transition: background 0.3s ease;
+		}
+		.button:hover {
+			background: #00a896;
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2em;
+		}
+		.card {
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 1em;
+			padding: 2em;
+			transition: transform 0.3s ease;
+		}
+		.card:hover {
+			transform: translateY(-5px);
+		}
+		.card img {
+			width: 100%;
+			border-radius: 0.5em;
+			margin-bottom: 1em;
+		}
+		footer {
+			text-align: center;
+			padding: 2em;
+			background: #111;
+			color: #888;
+		}
+		footer a {
+			color: #00d1b2;
+			margin: 0 0.5em;
+		}
+	</style>
 </head>
-<body class="is-preload">
-
-	<!-- Header -->
-	<header id="header">
-		<div class="inner">
-			<h1>Hi there!</h1>
-			<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Olin Pinto Avatar" /></a>
-			<h2><strong>Olin Pinto</strong><br />
-				Researcher<br />
-				European Organization for Nuclear Research (CERN)
-			</h2>
+<body>
+	<header class="hero-section">
+		<div class="inner" data-aos="fade-down">
+			<img src="images/avatar.jpg" alt="Olin Pinto Avatar">
+			<h1>Olin Pinto</h1>
+			<h3>Radiation Protection Researcher @ CERN</h3>
+			<p>Monte Carlo simulations | Detector R&D | Muon Tomography | Data Science</p>
+			<a href="#about" class="button">Explore My Work</a>
 		</div>
 	</header>
 
-	<!-- Main -->
-	<div id="main">
+	<section id="about" data-aos="fade-up">
+		<h2>About Me</h2>
+		<p>Currently at CERN's Radiation Protection Group, I assess and mitigate radiation hazards in high-energy physics environments. My work includes detailed FLUKA simulations for LHC operations and upgrades.</p>
+		<p>Past work at DESY and the University of Hamburg focused on calorimetry for the ILC, including semi-empirical hadronic shower modeling. I've contributed to fast simulation tools like GFLASH and Particle Flow Algorithms.</p>
+		<p>I also collaborate with the European Space Agency on muon tomography for planetary exploration. Outside physics, I'm passionate about machine learning and data science.</p>
+	</section>
 
-		<!-- About Me -->
-		<section id="one">
-			<header class="major">
-				<h1>About Me</h1>
-			</header>
-			<p>
-				Currently, at CERN's Radiation Protection Group, my expertise in Monte Carlo simulations is applied to assessing and mitigating radiation hazards and risks at the forefront of particle physics. 
-				My focus on the Large Hadron Collider (LHC) and the exploration of physics beyond collider experiments underscores my commitment to ensuring the safety and success of groundbreaking scientific endeavors.
-			</p>
-
-			<p>
-				In the past, I was deeply involved with the International Linear Collider (ILC) experiment at DESY and the University of Hamburg.
-				During this time, I pioneered modeling efforts for hadronic shower shapes, specifically within the CALICE-AHCAL. This model was instrumental for rapid simulation studies, 
-				including GFLASH, and also enhanced Particle Flow Studies such as Pandora PFA.
-			</p>
-
-			<p>
-				My core research revolves around the development of sophisticated detectors. This encompasses not just projects like CALICE-AHCAL, but also innovations in tomography. 
-				A recent and notable endeavor of mine has been investigating the prospective uses of muon tomography for space-based imaging, a venture I embarked upon in collaboration with the European Space Agency (ESA).
-			</p>
-
-			<p>
-				Beyond these specialized projects, I harbor a keen interest in machine learning and data science. As an active member of the Young High Energy Physicists Association (yHEP), 
-				I am continuously seeking avenues to drive forward and contribute to the next generation of technological advancements.
-			</p>
-
-			<p>
-				Outside of my professional endeavors, I am an avid enthusiast of outdoor sports. I enjoy cricket, swimming, and cycling, always relishing the balance they provide to my rigorous academic pursuits.
-			</p>
-
-			<h2>Quick Links</h2>
-			<ul class="actions">
-				<li><a href="https://home.cern/" class="button">CERN</a></li>
-				<li><a href="https://hse.cern/" class="button">CERN-HSE</a></li>
-				<li><a href="https://www.desy.de/" class="button">DESY</a></li>
-				<li><a href="https://linearcollider.org/" class="button">ILC</a></li>
-				<li><a href="https://twiki.cern.ch/twiki/bin/view/CALICE/WebHome" class="button">CALICE-AHCAL</a></li>
-				<li><a href="https://yhep.desy.de/" class="button">yHEP</a></li>
-			</ul>
-		</section>
-
-		<!-- Current Work -->
-		<section id="current-work">
-			<h1>Current Work</h1>
-			<p>
-				I currently work at the <strong>Radiation Protection Group at CERN</strong>, where I specialize in evaluating and mitigating radiological risks associated with high-energy particle physics experiments.
-				My primary focus lies in conducting detailed <strong>Monte Carlo simulations using FLUKA</strong> to analyze radiation fields, shielding performance, and material activation for accelerator facilities including the <strong>Large Hadron Collider (LHC)</strong>.
-				These studies support safety assessments for ongoing operations and major future upgrades, helping ensure compliance with radiation protection standards and the well-being of personnel and the environment.
-			</p>
-			<div class="row">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/tsac.jpg" class="image fit thumb"><img src="images/thumbs/tsac.jpg" alt="FLUKA Simulation Example" /></a>
-					<h3>FLUKA Simulations for Radiation Protection</h3>
-					<p>
-						Carrying out high-precision <strong>FLUKA-based Monte Carlo simulations</strong> to evaluate radiological hazards at CERN’s accelerator complexes, including <strong>activation studies, shielding optimization, and dose estimation</strong>. 						
-					</p>
-				</article>
+	<section id="projects" data-aos="fade-up">
+		<h2>Highlights</h2>
+		<div class="grid">
+			<div class="card">
+				<img src="images/thumbs/tsac.jpg" alt="FLUKA Simulations">
+				<h3>FLUKA Radiation Simulations @ CERN</h3>
+				<p>High-precision Monte Carlo analysis for LHC safety, activation studies, shielding, and dose estimation.</p>
 			</div>
-		</section>
-
-		<!-- Previous Works -->
-		<section id="previous-works">
-			<h1>Previous Works</h1>
-			<div class="row">
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/Lunar2.jpg" class="image fit thumb"><img src="images/thumbs/gscan.png" alt="" /></a>
-					<h3>Muon Tomography for Lunar & Martian Exploration</h3>
-					<p>
-						In collaboration with the <strong>European Space Agency (ESA)</strong>, I explored the feasibility of using <strong>muon tomography</strong> for subsurface imaging of the Moon and Mars.
-						Using <strong>GEANT4-based simulations</strong>, this project investigated how cosmic rays and backscattered radiation could detect underground water or ice, with potential applications in future autonomous space missions.
-					</p>
-				</article>
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/GroupAHCAL.JPG" class="image fit thumb"><img src="images/thumbs/GroupAHCAL.JPG" alt="" /></a>
-					<h3>AHCAL Group at SPS-CERN TestBeam Campaign</h3>
-					<p>
-						Participated in beam tests at the CERN SPS as part of the CALICE collaboration, validating detector performance and collecting high-granularity calorimeter data for further analysis.
-					</p>
-				</article>
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/EPT.png" class="image fit thumb"><img src="images/thumbs/EPT.png" alt="" /></a>
-					<h3>CALICE-AHCAL Technological Prototype</h3>
-					<p>
-						Contributed to the development of a highly granular sampling calorimeter for future lepton collider experiments.
-						This prototype, based on a steel-scintillator design, used embedded <strong>SiPM-on-tile</strong> technology and integrated low-power front-end electronics for precision measurement of hadronic showers.
-					</p>
-				</article>
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/SIPM-onTile.jpg" class="image fit thumb"><img src="images/thumbs/SIPM-onTile.jpg" alt="" /></a>
-					<h3>SiPM-on-Tile Technology</h3>
-					<p>
-						Implemented and characterized scintillator tiles with central dimples, optimized for direct SiPM coupling and enhanced light collection, supporting high-resolution calorimetric detection.
-					</p>
-				</article>
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/Pion_Evt.jpg" class="image fit thumb"><img src="images/thumbs/Pion_Evt.jpg" alt="" /></a>
-					<h3>CALICE-AHCAL Event Display</h3>
-					<p>
-						Developed visualizations of hadronic shower topologies recorded in the AHCAL calorimeter, facilitating detector studies and aiding in simulation validation efforts.
-					</p>
-				</article>
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/3Dmodel.png" class="image fit thumb"><img src="images/thumbs/3Dmodel.png" alt="" /></a>
-					<h3>3D Modeling of Hadronic Showers</h3>
-					<p>
-						Created a semi-empirical model to describe the spatial and energy development of hadronic showers in highly granular calorimeters, enhancing simulation performance for fast reconstruction algorithms.
-					</p>
-				</article>
-
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/thumbs/OddN.png" class="image fit thumb"><img src="images/thumbs/OddN.png" alt="" /></a>
-					<h3>Systematics of Alpha Decay Half-Lives</h3>
-					<p>
-						Analyzed and refined phenomenological models (Viola-Seaborg, B.A. Brown) to study correlations between Q-values and alpha decay half-lives in nuclei, optimizing theoretical parameters for better alignment with experimental data.
-					</p>
-				</article>
-
+			<div class="card">
+				<img src="images/thumbs/gscan.png" alt="Muon Tomography">
+				<h3>Muon Tomography for ESA</h3>
+				<p>GEANT4-based simulations to detect lunar subsurface structures using cosmic ray muons.</p>
 			</div>
-		</section>
-
-		<!-- Contact -->
-		<section id="four">
-			<h2>Get In Touch</h2>
-			<div class="row">
-				<div class="col-8 col-12-small">
-					<form method="post" action="#">
-						<div class="row gtr-uniform gtr-50">
-							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-							<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-					</form>
-				</div>
-				<div class="col-4 col-12-small">
-					<ul class="labeled-icons">
-						<li>
-							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-							European Organization for Nuclear Research (CERN),<br />
-							Meyrin, Geneva, Switzerland
-						</li>
-					</ul>
-				</div>
+			<div class="card">
+				<img src="images/thumbs/GroupAHCAL.JPG" alt="AHCAL Group">
+				<h3>CALICE-AHCAL Beam Tests</h3>
+				<p>Calorimeter data collection at SPS for high-granularity hadron shower studies.</p>
 			</div>
-		</section>
-
-	</div>
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
-				<li><a href="mailto:olin.pinto@kbfi.de" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				<li><a href="https://github.com/olinpinto" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="https://www.linkedin.com/in/olin-pinto" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Olin Pinto</li>
-			</ul>
 		</div>
+	</section>
+
+	<section id="contact" data-aos="fade-up">
+		<h2>Contact Me</h2>
+		<p>Let's collaborate or discuss interesting projects.</p>
+		<ul>
+			<li>Email: <a href="mailto:olin.pinto@kbfi.de">olin.pinto@kbfi.de</a></li>
+			<li><a href="https://www.linkedin.com/in/olin-pinto">LinkedIn</a> | <a href="https://github.com/olinpinto">GitHub</a></li>
+		</ul>
+	</section>
+
+	<footer>
+		<p>&copy; Olin Pinto</p>
+		<p>
+			<a href="mailto:olin.pinto@kbfi.de"><i class="fas fa-envelope"></i></a>
+			<a href="https://github.com/olinpinto"><i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/olin-pinto"><i class="fab fa-linkedin"></i></a>
+		</p>
 	</footer>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>AOS.init();</script>
 </body>
 </html>
